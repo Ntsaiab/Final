@@ -43,7 +43,7 @@ const handleFilter = (e) => {
 
     return (
         
-        <div className="searchForm">
+        <div className={'container'}>
         {/* <Modal /> */}
             <form>
                 <label> RULEOUT: <input onChange= {(e) => handleFilter(e.target.value)} type="text" options=""></input></label>
