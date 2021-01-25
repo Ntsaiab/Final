@@ -1,0 +1,156 @@
+
+
+.App {
+  text-align: center;
+  background-color: #8aabec;
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1HuN6i15Ukvk0lZulFNoAE0RBcS2J6Ajofg&usqp=CAU);
+  opacity: 80%;
+  /* background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWJv4ULKnhckN65cCRFySriocT7EzLphZI_Q&usqp=CAU); */
+  /* image-rendering: pixelated; */
+  background-size: cover;
+  /* background-position: 50% 50%; */
+  padding: 200px
+ 
+}
+.App-header {
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+ 
+}
+
+nav {
+  position: absolute;
+  top: 10px;
+  left: 500px;
+  right: 500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+}
+
+#appName {
+  font-size: 50px;
+  width: 35rem;
+  
+ 
+}
+
+nav a {
+  border: purple 3px solid;
+  border-radius: 10px;
+  background-color: orchid;
+  font-size: small;
+  /* width: 50rem;
+  height: 10rem; */
+  box-shadow: 15px 15px 15px darkmagenta;
+  padding: 8px;
+  margin: 5%;
+  text-decoration: none;
+ 
+}
+nav a:hover {
+  background-color: #8aabec;
+  color: darkorchid;
+  transition: scale(1);
+  
+}
+main{
+  margin-top: 150px;
+}
+.about {
+  font-weight: 900;
+  font-size: x-large;
+  color:purple;
+  border: purple 5px solid;
+  box-shadow: 15px 15px 15px darkmagenta;
+  border-radius: 10px;
+  width: 60%
+}
+/* .about.transbox {
+  margin: 30px;
+  background-color: black;
+  border: 1px solid purple;
+  opacity: 0.6;
+} */
+
+.searchForm {
+  font-weight: 700;
+  font-size: x-large;
+  color:purple;
+  border: purple 5px solid;
+  box-shadow: 15px 15px 15px darkmagenta;
+  border-radius: 10px;
+  padding: 10px;
+  
+}
+
+.searchForm input {
+  border-radius: 10px;
+  background-color: lightgray;
+  color: purple;
+}
+
+
+.searchForm label {
+  font-size: xx-large;
+  font-weight: bold;
+  color:purple;
+
+
+}
+.deck {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  color: purple;
+}
+
+.deck a {
+  text-decoration: none;
+  
+}
+
+#rinfoForm {
+  border: purple 3px solid;
+  border-radius: 10px;
+  background-color: orchid;
+  font-size: small;
+  width: 20%;
+  box-shadow: 15px 15px 15px darkmagenta;
+  padding: 10px;
+  margin: 10px;
+}
+.colForm {
+  list-style: none;
+  border: purple 3px solid;
+  border-radius: 10px;
+  background-color: orchid;
+  font-size: medium;
+  font-weight: bold;
+  /* width: 100%; */
+  box-shadow: 15px 15px 15px darkmagenta;
+  padding: 10px;
+  margin: 10px;
+}
+
+.colForm button {
+  border-radius: 10px;
+  background-color: #8aabec;
+  color: purple;
+}
+
+footer {
+  color:purple;
+  border: purple 3px solid;
+  border-radius: 10px;
+  background-color: orchid;
+  font-size: small;
+  /* width: 500px; */
+  box-shadow: 15px 15px 15px darkmagenta;
+  /* padding: 10%; */
+  margin-top: 250px;
+}
