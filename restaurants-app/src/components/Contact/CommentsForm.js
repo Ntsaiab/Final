@@ -33,16 +33,16 @@ export default (props) => {
     }
 
     return (
-        <div className="searchForm">
+        <div className="container text-center">
             <h3>We would love to hear from you! <br/> Have a thought, comment or idea? <br />Please share it with us, we will try to respond!</h3> <br />
-            <form className="commentForm" onSubmit={createComment}>
-            <label> Name: <input type="text" ref={nameInput} /></label>  <br />
-            <label> Email: <input type="text" ref={emailInput} /></label>  <br /> 
-            <label> Ideas: <input type="text" ref={ideasInput} /></label> <br />
-                <input type="submit" value="Create Comment" />  
-            </form><br />
-
-            
+            <hr />
+            <form className="form-group" onSubmit={createComment}>
+            <label> Name: <input className="form-control" type="text" ref={nameInput} /></label>  <br />
+            <label> Email: <input className="form-control" type="text" ref={emailInput} /></label>  <br /> 
+            <label> Ideas: <textarea className="form-control" type="text" ref={ideasInput} /></label> <br />
+                <button className="btn btn-lg"><input className="form-control" type="submit" value="Create Comment"></input></button>
+            </form><br /> 
+            <hr/>
         </div>
     )
 }

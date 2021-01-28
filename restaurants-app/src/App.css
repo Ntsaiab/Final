@@ -1,14 +1,17 @@
-
-
 .App {
+  background-color: rgb(163, 111, 111);
+}
+
+
+/* .App {
   text-align: center;
   background-color: #8aabec;
   background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1HuN6i15Ukvk0lZulFNoAE0RBcS2J6Ajofg&usqp=CAU);
   opacity: 80%;
   /* background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWJv4ULKnhckN65cCRFySriocT7EzLphZI_Q&usqp=CAU); */
-  /* image-rendering: pixelated; */
+  /* image-rendering: pixelated; ^
   background-size: cover;
-  /* background-position: 50% 50%; */
+  /* background-position: 50% 50%; ^
   padding: 200px
  
 }
@@ -44,7 +47,7 @@ nav a {
   background-color: orchid;
   font-size: small;
   /* width: 50rem;
-  height: 10rem; */
+  height: 10rem; ^
   box-shadow: 15px 15px 15px darkmagenta;
   padding: 8px;
   margin: 5%;
@@ -74,7 +77,7 @@ main{
   background-color: black;
   border: 1px solid purple;
   opacity: 0.6;
-} */
+} ^
 
 .searchForm {
   font-weight: 700;
@@ -131,7 +134,7 @@ main{
   background-color: orchid;
   font-size: medium;
   font-weight: bold;
-  /* width: 100%; */
+  /* width: 100%; ^
   box-shadow: 15px 15px 15px darkmagenta;
   padding: 10px;
   margin: 10px;
@@ -149,8 +152,8 @@ footer {
   border-radius: 10px;
   background-color: orchid;
   font-size: small;
-  /* width: 500px; */
+  /* width: 500px; ^
   box-shadow: 15px 15px 15px darkmagenta;
-  /* padding: 10%; */
+  /* padding: 10%; *^
   margin-top: 250px;
-}
+} */

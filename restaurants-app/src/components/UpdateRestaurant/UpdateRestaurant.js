@@ -10,6 +10,7 @@ const UpdateRestaurant = (props) => {
     const cultureInput = useRef(null);
     const dishInput = useRef(null);
     const ruleoutInput = useRef(null);
+    const imgInput = useRef(null);
 
     const token = window.localStorage.getItem('token');
 
@@ -19,7 +20,8 @@ const UpdateRestaurant = (props) => {
             zip : "",
             culture : "",
             dish : "",
-            ruleout : ""
+            ruleout : "",
+            img: ""
     })
 
     
@@ -54,8 +56,9 @@ const UpdateRestaurant = (props) => {
             const culture = cultureInput.current.value
             const dish = dishInput.current.value;
             const ruleout = ruleoutInput.current.value;
+            const img = imgInput.current.value;
             const body = JSON.stringify({
-                name, city, zip, culture, dish, ruleout
+                name, city, zip, culture, dish, ruleout, img
             });// turns js object to json database
             event.currentTarget.reset();
             try{
@@ -99,6 +102,7 @@ useEffect(() => {
             <label> Culture: <input type="text" ref={cultureInput} defaultValue={collection.culture}/>{props.culture} </label>  
             <label> Dish: <input type="text" ref={dishInput} defaultValue={collection.dish}/>{props.dish} </label>  
             <label> Ruleout: <input type="text" ref={ruleoutInput} defaultValue={collection.ruleout}/>{props.ruleout} </label> 
+            <label> Img: <input type="text" ref={imgInput} defaultValue={collection.img}/>{props.img} </label>
                 <input type="submit" value="Update Restaurant Info" />  
                </form><br /> 
                <a href="https://goo.gl/maps/yRntqZbWT4z6xFxWA" target="_blank" rel="noreferrer"><input type="submit" value="Let's go eat!" /></a>  

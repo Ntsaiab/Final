@@ -1,3 +1,4 @@
+// import { urlencoded } from 'express';
 import { useState, useEffect, useRef } from 'react';// need to fix update route and button, create a separate form
 
 
@@ -9,11 +10,12 @@ export default (props) => {
     const cultureInput = useRef(null);
     const dishInput = useRef(null);
     const ruleoutInput = useRef(null);
-
+    const imgInput = useRef(null);
     const token = window.localStorage.getItem('token');
     
     const [collections, setCollections] = useState([])
 
+    // const url = 'https://images.squarespace-cdn.com/content/v1/5a1c363cf14aa168f5288db9/1511978780299-0VK2O99F63LX6IIZXETT/ke17ZwdGBToddI8pDm48kNvT88LknE-K9M4pGNO0Iqd7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1USOFn4xF8vTWDNAUBm5ducQhX-V3oVjSmr829Rco4W2Uo49ZdOtO_QXox0_W7i2zEA/001.jpg?format=2500w';
     
 
    // CREATE
@@ -25,8 +27,9 @@ export default (props) => {
         const culture = cultureInput.current.value
         const dish = dishInput.current.value;
         const ruleout = ruleoutInput.current.value;
+        const img = imgInput.current.value;
         const body = JSON.stringify({
-            name, city, zip, culture, dish, ruleout
+            name, city, zip, culture, dish, ruleout, img
         });// turns js object to json database
         event.currentTarget.reset();
         try{
@@ -85,36 +88,44 @@ export default (props) => {
     }, [])
 
     return (
-        <div className="searchForm">
-            <h3>Was it good! Add your fav Restaurant location and dish on this page!</h3>
-            <br />
-            <form  onSubmit={createCollection}>
-            <label> Name: <input type="text" ref={nameInput} /> </label>  
-            <label> City: <input type="text" ref={cityInput} /> </label>   
-            <label> Zip: <input type="text" ref={zipInput} /> </label> <br />
-            <label> Culture: <input type="text" ref={cultureInput} /> </label>  
-            <label> Dish: <input type="text" ref={dishInput} /> </label>  
-            <label> Ruleout: <input type="text" ref={ruleoutInput} /> </label> 
-                <input type="submit" value="Add A Restaurant" />  
+        <div className="container">
+            <h3 className="Lead">Was it good! Add your fav Restaurant location and dish on this page!</h3>
+            <hr/>
+            <form  className="form-group"onSubmit={createCollection}>
+            <label> Name: <input className="form-control" type="text" ref={nameInput} /> </label>  
+            <label> City: <input className="form-control" type="text" ref={cityInput} /> </label>   
+            <label> Zip: <input className="form-control" type="text" ref={zipInput} /> </label> <br />
+            <label> Culture: <input className="form-control" type="text" ref={cultureInput} /> </label>  
+            <label> Dish: <input className="form-control" type="text" ref={dishInput} /> </label>  
+            <label> Ruleout: <input className="form-control" type="text" ref={ruleoutInput} /> </label><br/>
+            <label> Img: <input className="form-control" type="text" ref={imgInput} /> </label><br/>
+                <button className="btn btn-lg"><input className="form-control" type="submit" value="Add A Restaurant"></input></button>
+                
             </form><br />
-            <div className="deck">
+
+                <hr/>
+
+            <div className="card" >
             {
                 collections.map(collection => {
                 return (
-                    <div className="colForm">
-                    <li key={collection._id}>
-                    {collection.name} <br /> {collection.city} <br />
-                    <button onClick={
-                        (event) => {
-                            deleteCollection(collection._id)
-                        }
-                    }>Delete {collection.name}</button>
-                    </li>
+                    <div>
+                        <ul  /*style={{backgroundImage: url}}*/ >
+                            <li className="btn btn-lg" key={collection._id}>
+                            {collection.name} <br /> {collection.city} <br /> {collection.img}
+                            <button className="form-control" onClick={
+                                (event) => {
+                                    deleteCollection(collection._id)
+                                }
+                            }>Delete {collection.name}</button>
+                            </li>
+                        </ul>
                     </div>
                 )
                 })
             }
             </div>
+            <hr/>
         </div>
     )
 

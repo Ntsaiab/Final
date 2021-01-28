@@ -64,21 +64,21 @@ export default () => {
   
 
     return (
-        <div className="searchForm">
-            <div >
+        <div className="container">
+            <div className="form-group" >
             <h1> Register Form</h1>
             <form onSubmit={register}>
-            <label> Username: <input type="text" ref={regNameInput}></input></label><br/>
-            <label> Password: <input type="password" ref={regPasswordInput}></input></label><br />
-            <input type="submit"></input>
+            <label> Username: <input className="form-control" type="text" ref={regNameInput}></input></label><br/>
+            <label> Password: <input className="form-control" type="password" ref={regPasswordInput}></input></label><br />
+            <button className="btn btn-lg"><input className="form-control" type="submit"></input></button>
             </form>
             </div>
             <div >
             <h1>Login Form</h1>
             <form onSubmit={login}>
-            <label> Username: <input type="text" ref={nameInput}></input></label><br />
-            <label> Password: <input type="password" ref={passwordInput}></input></label><br />
-            <input type="submit"></input>
+            <label> Username: <input className="form-control" type="text" ref={nameInput}></input></label><br />
+            <label> Password: <input className="form-control" type="password" ref={passwordInput}></input></label><br />
+            <button className="btn btn-lg"><input className="form-control" type="submit"></input></button>
             </form>
             </div>
 

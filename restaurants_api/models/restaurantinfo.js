@@ -6,7 +6,8 @@ const restaurantInfo = Schema({
     zip: {type: Number, required: true},
     culture: {type: String, required: true},
     dish: {type: String, required: true},
-    ruleout: {type: String, required: true}
+    ruleout: {type: String, required: true},
+    img: {type: String}
 
 })
 
