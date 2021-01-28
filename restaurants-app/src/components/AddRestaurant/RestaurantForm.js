@@ -105,7 +105,7 @@ export default (props) => {
 
                 <hr/>
 
-            <div className="card" >
+            <div className="addedresults" >
             {
                 collections.map(collection => {
                 return (
