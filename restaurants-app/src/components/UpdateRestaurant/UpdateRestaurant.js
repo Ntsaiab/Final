@@ -92,8 +92,8 @@ useEffect(() => {
 
     return (
         <div className="searchForm">
-            <div className="container">
-                <div className="form-group" >
+            <div className="">
+                <div className="" >
                         <h2>UPDATE INFO</h2>
                         <h3>Need to make a change or add a new dish! Update it here!</h3>
                         <br />
