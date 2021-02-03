@@ -45,27 +45,33 @@ const handleFilter = (e) => {
         
         <div className="container">
         {/* <Modal /> */}
-            <form>
-                <label> RULEOUT: <input onChange= {(e) => handleFilter(e.target.value)} type="text" options=""></input></label>
+            <form className="searchForm">
+                <label> <h3 className="homeH3">RULEOUT: </h3><input onChange= {(e) => handleFilter(e.target.value)} type="text" options=""></input></label>
                 {/* <input  type='submit'></input> */}
             </form>
-            <div className="deck">
+            <div className="addedresults">
             {
                 filteredItems.length > 1 ? 
                 filteredItems.map(collection => {
                     return (
-                        <div id="rinfoForm">
+                        <div id="rinfoForm" className="">
                     <Link to={`/UpdateRestaurant/${collection._id}`}><div  key={collections._id}>
-                    <h3>Name: {collection.name}<br /> City: {collection.city} <br /> Zip: {collection.zip} <br />
-                    Cuisine: {collection.culture} <br /> Dish: {collection.dish} <br /> Ruleout: {collection.ruleout}</h3>
+                    <div className="affPTags">
+                    <p >Name: {collection.name}  <br />
+                    City: {collection.city} <br/> 
+                    Zip: {collection.zip} <br/> 
+                    Cuisine: {collection.culture} <br/> 
+                    Dish: {collection.dish} <br/> 
+                    Ruleout: {collection.ruleout}</p>
+                    </div>
                     </div>
                     </Link>
                     
                     </div>
                     )
                 }) : 
-                (<div> Search for what you need to ruleout of your meal! <br />Can't remember the Restaurant? Food restrictions? No worries! <br />
-                Click on a Restaurant to update information or for directions.</div>)
+                (<div className="container p-3 my-3 border"> <h3 className="homeH3">Search for what you need to ruleout of your meal! <br />Can't remember the Restaurant? Food restrictions? No worries! <br />
+                Click on a Restaurant to update information or for directions.</h3></div>)
             }
             </div>
         </div>

@@ -90,7 +90,7 @@ export default (props) => {
     return (
         <div className="container">
             <h3 className="Lead">Was it good! Add your fav Restaurant location and dish on this page!</h3>
-            <hr/>
+            <hr className="searchForm"/>
             <form  className="form-group"onSubmit={createCollection}>
             <label> Name: <input className="form-control" type="text" ref={nameInput} /> </label>  
             <label> City: <input className="form-control" type="text" ref={cityInput} /> </label>   

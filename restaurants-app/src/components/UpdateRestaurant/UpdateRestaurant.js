@@ -92,34 +92,39 @@ useEffect(() => {
 
     return (
         <div className="searchForm">
-            <h2>UPDATE INFO</h2>
-            <h3>Need to make a change or add a new dish! Update it here!</h3>
-            <br />
-            <form className="collectionsForm" onSubmit={updateCollection}>
-            <label> Name: <input type="text" ref={nameInput} defaultValue={collection.name}/>{props.name} </label>  
-            <label> City: <input type="text" ref={cityInput} defaultValue={collection.city}/> {props.city}</label>   
-            <label> Zip: <input type="text" ref={zipInput} defaultValue={collection.zip}/>{props.zip} </label> <br />
-            <label> Culture: <input type="text" ref={cultureInput} defaultValue={collection.culture}/>{props.culture} </label>  
-            <label> Dish: <input type="text" ref={dishInput} defaultValue={collection.dish}/>{props.dish} </label>  
-            <label> Ruleout: <input type="text" ref={ruleoutInput} defaultValue={collection.ruleout}/>{props.ruleout} </label> 
-            <label> Img: <input type="text" ref={imgInput} defaultValue={collection.img}/>{props.img} </label>
-                <input type="submit" value="Update Restaurant Info" />  
-               </form><br /> 
-               <a href="https://goo.gl/maps/yRntqZbWT4z6xFxWA" target="_blank" rel="noreferrer"><input type="submit" value="Let's go eat!" /></a>  
-            
-            
-            {/* {
-                collection.map(collection => {
-                return (
-                    <>
-                    <li key={collection._id}>
-                    {collection.name}
-                    </li>
-                    </>
-                )
-                })
-            } */}
+            <div className="container">
+                <div className="form-group" >
+                        <h2>UPDATE INFO</h2>
+                        <h3>Need to make a change or add a new dish! Update it here!</h3>
+                        <br />
+                        <form className="collectionsForm" onSubmit={updateCollection}>
+                        <label> Name: <input className="form-control" type="text" ref={nameInput} defaultValue={collection.name}/>{props.name} </label>  
+                        <label> City: <input className="form-control" type="text" ref={cityInput} defaultValue={collection.city}/> {props.city}</label>   
+                        <label> Zip: <input className="form-control" type="text" ref={zipInput} defaultValue={collection.zip}/>{props.zip} </label> <br />
+                        <label> Culture: <input className="form-control" type="text" ref={cultureInput} defaultValue={collection.culture}/>{props.culture} </label>  
+                        <label> Dish: <input className="form-control" type="text" ref={dishInput} defaultValue={collection.dish}/>{props.dish} </label>  
+                        <label> Ruleout: <input className="form-control" type="text" ref={ruleoutInput} defaultValue={collection.ruleout}/>{props.ruleout} </label> 
+                        <label> Img: <input className="form-control" type="text" ref={imgInput} defaultValue={collection.img}/>{props.img} </label>
+                        <button className="btn btn-lg"><input type="submit" value="Update Restaurant Info" /></button> 
+                        </form><br /> 
+                        <a href="https://goo.gl/maps/yRntqZbWT4z6xFxWA" target="_blank" rel="noreferrer"><button className="btn btn-lg"><input type="submit" value="Let's go eat!" /></button></a>  
+                
+                
+                            {/* {
+                                collection.map(collection => {
+                                return (
+                                    <>
+                                    <li key={collection._id}>
+                                    {collection.name}
+                                    </li>
+                                    </>
+                                )
+                                })
+                            } */}
+                </div>
+            </div>
         </div>
+    
     )
 }
 

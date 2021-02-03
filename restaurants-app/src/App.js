@@ -15,12 +15,12 @@ function App() {
  
 
   return (
-    <div className="App">
-      <div className="container text-center">
-      <header className="header">
-          <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <div className="body">
+      <div className="container-fluid text-center">
+      <header className="Logo">
+          <nav className="navbar navbar-expand-lg navbar-light">
         <div className="container">
-        <Link className="navbar-brand" to='/'><h1 id="appName">RESTAURANT APP</h1></Link>
+        <Link className="navbar-brand" to='/'><h1 className="homeH1">REMEMBER EATS</h1></Link>
         
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
@@ -30,7 +30,7 @@ function App() {
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item dropdown">
                 <a className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Site Menu
+                  <h3 className="homeH2">Site Menu</h3>
                 </a>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li><Link className="dropdown-item" aria-current="page" to='/addrestaurant'><h3>Add Restaurant</h3> <br /> </Link></li>

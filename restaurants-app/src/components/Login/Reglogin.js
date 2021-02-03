@@ -73,12 +73,13 @@ export default () => {
             <button className="btn btn-lg"><input className="form-control" type="submit"></input></button>
             </form>
             </div>
+            <hr/>
             <div >
             <h1>Login Form</h1>
             <form onSubmit={login}>
             <label> Username: <input className="form-control" type="text" ref={nameInput}></input></label><br />
             <label> Password: <input className="form-control" type="password" ref={passwordInput}></input></label><br />
-            <button className="btn btn-lg"><input className="form-control" type="submit"></input></button>
+            <button className="btn btn-lg btn-outline-*"><input className="form-control" type="submit"></input></button>
             </form>
             </div>
 
