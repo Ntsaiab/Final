@@ -32,8 +32,8 @@ mongoose.connection.once('open', () => {
     console.log('Connected, United and Protected')
 })
 
-app.use('/collections', collectionController);
-app.use('/comments', commentsController);
+app.use('/api/collections', collectionController);
+app.use('/api/comments', commentsController);
 
 // authentication route
 app.post('/api/register', (req, res) => {

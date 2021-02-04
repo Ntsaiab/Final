@@ -11,6 +11,7 @@ export default (props) => {
     const dishInput = useRef(null);
     const ruleoutInput = useRef(null);
     const imgInput = useRef(null);
+    
     const token = window.localStorage.getItem('token');
     
     const [collections, setCollections] = useState([])
