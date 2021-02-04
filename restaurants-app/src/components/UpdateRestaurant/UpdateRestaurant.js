@@ -30,7 +30,7 @@ const UpdateRestaurant = (props) => {
     // show - Update
   const showCollection = async (id) => {
     try {
-      const response = await fetch(`/collections/${props.match.params.id}`, {
+      const response = await fetch(`/api/collections/${props.match.params.id}`, {
           method: 'GET',
           headers: {
               'Content-type': 'application/json',
@@ -62,7 +62,7 @@ const UpdateRestaurant = (props) => {
             });// turns js object to json database
             event.currentTarget.reset();
             try{
-                const response = await fetch(`/collections/${props.match.params.id}`, {
+                const response = await fetch(`/api/collections/${props.match.params.id}`, {
                     method : 'PUT',
                     headers : {
                         'Content-type': 'application/json',

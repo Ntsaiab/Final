@@ -34,7 +34,7 @@ export default (props) => {
         });// turns js object to json database
         event.currentTarget.reset();
         try{
-            const response = await fetch('/collections', {
+            const response = await fetch('/api/collections', {
                 method : 'POST',
                 headers : {
                     'Content-type': 'application/json'
@@ -55,7 +55,7 @@ export default (props) => {
     // READ
   const fetchCollections = async () => {
     try {
-      const response = await fetch('/collections')
+      const response = await fetch('/api/collections')
       const data = await response.json();
       setCollections(data)
     } catch (error) {
@@ -67,7 +67,7 @@ export default (props) => {
     // DELETE
     const deleteCollection = async (id) => {
         try{
-            const response = await fetch(`/collections/${id}`, {
+            const response = await fetch(`/api/collections/${id}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-type': 'application/json',

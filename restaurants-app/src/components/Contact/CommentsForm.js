@@ -15,7 +15,7 @@ export default (props) => {
         });// turns js object to json database
         event.currentTarget.reset();
         try{
-            const response = await fetch('http://localhost:3000/comments', {
+            const response = await fetch('/api/comments', {
                 method : 'POST',
                 headers : {
                     'Content-type': 'application/json'

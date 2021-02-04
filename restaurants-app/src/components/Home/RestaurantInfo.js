@@ -10,7 +10,7 @@ const PullBackend = (props) => {
     
     const fetchCollections = async () => {
         try {
-            const response = await fetch('/collections');
+            const response = await fetch('/api/collections');
             const data = await response.json();
             if (data) { // null checker
                 console.log(data);
